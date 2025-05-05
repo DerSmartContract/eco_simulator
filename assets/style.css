@@ -1,0 +1,50 @@
+/* assets/style.css */
+
+body {
+    background-color: #0A0F2C; /* Dunkelblau Hintergrund */
+    color: #CFD8DC;           /* Helles Grau für Text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1, h2, h3, h4 {
+    color: #FFD700;  /* Akzentfarbe */
+}
+
+.stDataFrame, .stTable {
+    background-color: #0A0F2C;
+    color: #CFD8DC;
+}
+
+a {
+    color: #FFD700;
+}
+
+div[data-testid="stMetricValue"] {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.stMarkdown {
+    color: #CFD8DC;
+}
+
+button, .stButton>button {
+    background-color: #0A0F2C;
+    color: #FFD700;
+    border: 1px solid #FFD700;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #FFD700;
+    color: #0A0F2C;
+}
+
+.stAlert, .stError, .stWarning, .stSuccess {
+    background-color: #222;
+    color: #FFD700;
+}
+
+hr {
+    border: 1px solid #FFD700;
+}

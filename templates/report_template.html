@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Ökosystem Sensitivitätsanalyse</title>
+  <link rel="stylesheet" href="../sensitivity_report/style.css">
+</head>
+<body>
+  <h1>Ökosystem Sensitivitätsanalyse</h1>
+  <hr>
+  <table>
+    <thead>
+      <tr>
+        {% for col in records[0].keys() %}
+          <th>{{ col }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in records %}
+      <tr>
+        {% for val in row.values() %}
+        <td>{{ "%.2f"|format(val) }}</td>
+        {% endfor %}
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% for var in ["virus","prey","predator"] %}
+  <h2>{{ var.capitalize() }}</h2>
+  <img src="heatmap_{{ var }}.png" alt="Heatmap {{ var }}">
+  {% endfor %}
+</body>
+</html>
